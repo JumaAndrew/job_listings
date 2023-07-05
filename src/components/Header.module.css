@@ -1,0 +1,5 @@
+.header {
+  height: 156px;
+  background-image: url('../assets/images/bg-header-desktop.svg');
+  background-color: var(--color-primary);
+}

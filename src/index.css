@@ -1,0 +1,35 @@
+:root {
+  --color-primary: hsl(180, 29%, 50%);
+  --color-secondary: hsl(180, 52%, 96%);
+  --color-tertiary: hsl(180, 31%, 95%);
+  --color-light-grey: hsl(180, 8%, 52%);
+  --color-dark-grey: hsl(180, 14%, 20%);
+  --color-primary-bg: hsl(185, 58%, 96%);
+  --color-secondary-bg: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-primary-bg);
+  font-size: 1.3rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  font-size: 62.5%;
+}
