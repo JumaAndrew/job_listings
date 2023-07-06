@@ -3,7 +3,6 @@ import listingData from '../assets/data.json';
 
 const listingsInitialState = {
   listingData,
-  filtered: false,
   filteredData: [],
 };
 

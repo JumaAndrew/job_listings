@@ -1,13 +1,17 @@
-import { useSelector, useDispatch } from 'react-redux';
-import classes from './Header.module.css';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+
+import classes from './Header.module.css';
 import FilteredSkills from './FilteredSkills';
 import { listingsActions } from '../store/base';
 
 const Header = () => {
-  const filtered = useSelector((state) => state.listings.filtered);
   const dispatch = useDispatch();
   const [selectedSkills, setSelectedSkills] = useState(new Set());
+
+  const restoreListings = () => {
+    dispatch(listingsActions.restore());
+  };
 
   let selectedSkillsArray;
   const updatedSet = new Set(selectedSkills);
@@ -20,7 +24,7 @@ const Header = () => {
   if (selectedSkills.size > 0) {
     selectedSkillsArray = Array.from(selectedSkills);
   } else {
-    dispatch(listingsActions.restore());
+    restoreListings();
   }
 
   const deleteSkill = (skill) => {
@@ -40,11 +44,19 @@ const Header = () => {
     dispatch(listingsActions.filter(selectedSkillsArray));
   };
 
+  const clearFilter = () => {
+    updatedSet.clear();
+    setSelectedSkills(updatedSet);
+  };
+
   return (
     <>
       <div className={classes.header}>
         <div className={classes.filters}>
           <select onChange={selectHandler}>
+            <option value="" selected>
+              Filter Skills
+            </option>
             <option value="HTML">HTML</option>
             <option value="CSS">CSS</option>
             <option value="JavaScript">Javascript</option>
@@ -58,9 +70,20 @@ const Header = () => {
           </select>
           <div className={classes.filter__skills}>{filteredSkills}</div>
           {selectedSkills.size > 0 && (
-            <span onClick={filterHandler} className={classes.filter__action}>
-              Filter
-            </span>
+            <>
+              <span
+                onClick={filterHandler}
+                className={classes.filter__action_filter}
+              >
+                Filter
+              </span>
+              <span
+                className={classes.filter__action_clear}
+                onClick={clearFilter}
+              >
+                Clear
+              </span>
+            </>
           )}
         </div>
       </div>

@@ -12,7 +12,7 @@
 
 .skill__text {
   color: var(--color-primary);
-  background-color: bisque;
+  background-color: var(--color-primary-bg);
 }
 
 .skill__icon {

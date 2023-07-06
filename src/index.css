@@ -6,6 +6,7 @@
   --color-dark-grey: hsl(180, 14%, 20%);
   --color-primary-bg: hsl(185, 58%, 96%);
   --color-secondary-bg: hsl(0, 0%, 100%);
+  --color-tertiary-bg: hsl(185, 30%, 83%);
 }
 
 *,
