@@ -3,3 +3,32 @@
   background-image: url('../assets/images/bg-header-desktop.svg');
   background-color: var(--color-primary);
 }
+
+.filters {
+  color: var(--color-primary);
+  max-width: 60%;
+  height: 3rem;
+  background-color: #fff;
+  top: 2rem;
+
+  display: flex;
+  gap: 1rem;
+}
+
+.filter__skills {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter__action {
+  color: #fff;
+  align-self: center;
+  padding: 6px 13px;
+  background-color: var(--color-dark-grey);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.filter__action:hover {
+  background-color: var(--color-primary);
+}

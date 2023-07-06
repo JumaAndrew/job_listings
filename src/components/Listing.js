@@ -14,19 +14,19 @@ const Listing = (props) => {
       <div className={classes.listing__header}>
         <img
           className={classes.listing__image}
-          src="../assets/images/image-anne.jpg"
+          src={listing.logo}
           alt={`${listing.company} logo`}
         />
         <div className={classes.listing__details}>
           <span className={classes.listing__companyName}>
             {listing.company}
           </span>
-          <span className={classes.listing__new}>
+          {/* <span className={classes.listing__new}>
             {listing.new ? 'new!' : ''}
           </span>
           <span className={classes.listing__featured}>
             {listing.featured ? 'featured' : ''}
-          </span>
+          </span> */}
           <p className={classes.listing__designation}>{listing.position}</p>
           <span className={classes.listing__posted}>{listing.postedAt}</span>
           <span className={classes.listing__contract}>{listing.contract}</span>

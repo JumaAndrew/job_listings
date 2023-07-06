@@ -1,0 +1,26 @@
+.skill {
+  display: inline-block;
+  align-self: center;
+  border-radius: 7px;
+
+  display: flex;
+}
+
+.skill span {
+  padding: 3px 5px;
+}
+
+.skill__text {
+  color: var(--color-primary);
+  background-color: bisque;
+}
+
+.skill__icon {
+  color: #fff;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.skill__icon:hover {
+  background-color: #000;
+}

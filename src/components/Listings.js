@@ -4,7 +4,14 @@ import Listing from './Listing';
 import classes from './Listings.module.css';
 
 const Listings = () => {
-  const listings = useSelector((state) => state.listings);
+  const listingsImport = useSelector((state) => state.listings.listingData);
+  const listingsSet = new Set();
+
+  listingsImport.forEach((listing) => {
+    listingsSet.add(listing);
+  });
+
+  const listings = Array.from(listingsSet);
 
   const listingsList = listings.map((listing) => (
     <Listing key={listing.id} listing={listing}></Listing>
