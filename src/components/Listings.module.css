@@ -1,4 +1,11 @@
 .container {
   max-width: 80%;
   margin: 3rem auto;
+  overflow: scroll;
+}
+
+@media (max-width: 565px) {
+  .container {
+    margin: 7rem auto 2rem auto;
+  }
 }

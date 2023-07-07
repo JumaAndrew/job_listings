@@ -1,5 +1,5 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
-import listingData from '../assets/data.json';
+import listingData from '../assets/formatteddata';
 
 const listingsInitialState = {
   listingData,

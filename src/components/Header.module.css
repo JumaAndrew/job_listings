@@ -58,3 +58,9 @@ select {
   border-radius: 4px;
   border: none;
 }
+
+@media (max-width: 565px) {
+  .filters {
+    transform: translateY(10rem);
+  }
+}
